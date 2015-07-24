@@ -2,7 +2,7 @@ name := """jooq-custom-codegen"""
 
 organization := "triplec1988"
 
-version := "1.0.2"
+version := "1.0.3"
 
 scalaVersion := "2.11.6"
 
