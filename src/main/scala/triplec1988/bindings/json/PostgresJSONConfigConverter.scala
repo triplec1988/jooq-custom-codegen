@@ -1,9 +1,9 @@
-package triplec1988.bindings
+package triplec1988.bindings.json
 
 import java.io.IOException
 
+import com.typesafe.config.{Config, ConfigFactory, ConfigRenderOptions}
 import org.jooq.Converter
-import com.typesafe.config.{ConfigRenderOptions, ConfigFactory, Config}
 
 /**
  * Created by chris on 7/21/15.
