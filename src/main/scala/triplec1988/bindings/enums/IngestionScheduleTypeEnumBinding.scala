@@ -3,7 +3,7 @@ package triplec1988.bindings.enums
 import java.sql.{SQLFeatureNotSupportedException, Types, SQLException}
 import java.util.Objects
 
-import triplec1988.enums.IngestionScheduleType._
+import triplec1988.enums.IngestionScheduleType
 import org.jooq._
 import org.jooq.impl.DSL
 

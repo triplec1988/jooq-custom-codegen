@@ -4,7 +4,7 @@ import java.sql.SQLException
 
 import org.jooq.Converter
 import java.io.IOException
-import triplec1988.enums.IngestionScheduleType.IngestionScheduleType
+import triplec1988.enums.{IngestionScheduleTypeParser, IngestionScheduleType}
 
 /**
  * Created by chris on 7/28/15.
@@ -16,7 +16,7 @@ class IngestionScheduleTypeEnumConverter extends Converter[Object, IngestionSche
       if (t == null) {
         throw new SQLException("ingestion_schedule_type should never be null!")
       } else {
-        t.asInstanceOf[IngestionScheduleType]
+        IngestionScheduleTypeParser.parse(t.toString)
       }
     } catch {
       case ioe: IOException => throw new RuntimeException(ioe)
@@ -29,7 +29,7 @@ class IngestionScheduleTypeEnumConverter extends Converter[Object, IngestionSche
       if (u == null) {
         throw new SQLException("ingestion_schedule_type cannot be null!")
       } else {
-        u.asInstanceOf[Object]
+        u.stringName().asInstanceOf[Object]
       }
     } catch {
       case ioe: IOException => throw new RuntimeException(ioe)
