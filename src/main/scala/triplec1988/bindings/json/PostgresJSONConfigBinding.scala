@@ -1,11 +1,11 @@
-package triplec1988.bindings
+package triplec1988.bindings.json
 
-import java.sql.{SQLFeatureNotSupportedException, Types, SQLException}
+import java.sql.{SQLException, SQLFeatureNotSupportedException, Types}
 import java.util.Objects
 
-import org.jooq.impl.DSL
-import org.jooq._
 import com.typesafe.config.Config
+import org.jooq._
+import org.jooq.impl.DSL
 
 /**
  * Created by chris on 7/21/15.
