@@ -4,12 +4,12 @@ import java.sql.SQLException
 
 import org.jooq.Converter
 import java.io.IOException
-import triplec1988.enums.{IngestionScheduleTypeParser, IngestionScheduleType}
+import triplec1988.enums.schedule.{IngestionScheduleTypeParser, IngestionScheduleType}
 
 /**
  * Created by chris on 7/28/15.
  */
-class IngestionScheduleTypeEnumConverter extends Converter[Object, IngestionScheduleType] {
+class IngestionScheduleTypeConverter extends Converter[Object, IngestionScheduleType] {
 
   override final def from(t: Object) : IngestionScheduleType = {
     try {

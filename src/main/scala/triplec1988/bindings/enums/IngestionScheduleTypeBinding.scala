@@ -2,17 +2,16 @@ package triplec1988.bindings.enums
 
 import java.sql.{SQLFeatureNotSupportedException, Types, SQLException}
 import java.util.Objects
-
-import triplec1988.enums.IngestionScheduleType
 import org.jooq._
 import org.jooq.impl.DSL
+import triplec1988.enums.schedule.IngestionScheduleType
 
 /**
  * Created by chris on 7/28/15.
  */
-class IngestionScheduleTypeEnumBinding extends Binding[Object, IngestionScheduleType] {
+class IngestionScheduleTypeBinding extends Binding[Object, IngestionScheduleType] {
   override final def converter() : Converter[Object, IngestionScheduleType] = {
-    new IngestionScheduleTypeEnumConverter()
+    new IngestionScheduleTypeConverter()
   }
 
   @throws[SQLException]
