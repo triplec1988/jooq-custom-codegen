@@ -2,9 +2,9 @@ name := """jooq-custom-codegen"""
 
 organization := "triplec1988"
 
-version := "1.1.0"
+version := "1.1.1"
 
-scalaVersion := "2.11.6"
+crossScalaVersions := Seq("2.9.3", "2.10.4", "2.11.6")
 
 libraryDependencies ++= Seq(
   "io.backchat.inflector" % "scala-inflector_2.11" % "1.3.5",
