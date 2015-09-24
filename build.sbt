@@ -2,9 +2,11 @@ name := """jooq-custom-codegen"""
 
 organization := "triplec1988"
 
-version := "1.1.1"
+version := "1.1.2"
 
-crossScalaVersions := Seq("2.9.3", "2.10.4", "2.11.6")
+scalaVersion in GlobalScope := "2.11.7"
+
+crossScalaVersions := Seq("2.9.3", "2.10.4", "2.11.7")
 
 libraryDependencies ++= Seq(
   "io.backchat.inflector" % "scala-inflector_2.11" % "1.3.5",
@@ -13,5 +15,7 @@ libraryDependencies ++= Seq(
 )
 
 exportJars := true
+
+ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
 libraryDependencies <+= (scalaVersion){ "org.scala-lang" % "scala-reflect" % _ }
